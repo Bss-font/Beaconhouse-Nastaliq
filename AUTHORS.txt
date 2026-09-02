@@ -1,5 +1,6 @@
-# COPYRIGHT HOLDERS
-# The following entities hold the copyright for the Beaconhouse Nastaliq project.
+# This file contains the list of copyright holders for the
+# Beaconhouse Nastaliq font, in alphabetical order.
+#
+# For a list of individual contributors, see CONTRIBUTORS.txt
 
-Beaconhouse
-https://www.beaconhouse.net/
+Beaconhouse Group <https://www.beaconhouse.net/>
