@@ -72,24 +72,5 @@ Beaconhouse Nastaliq is built from a single [Glyphs](https://glyphsapp.com/) sou
 
    This reads `sources/config.yaml`, compiles `sources/BeaconhouseNastaliq.glyphs` via `fontmake`, and outputs the final static TTF into `fonts/ttf/`.
 
-3. **`sources/config.yaml`:**
-
-   ```yaml
-   sources:
-     - BeaconhouseNastaliq.glyphs
-   familyName: "Beaconhouse Nastaliq"
-   buildOTF: false
-   ```
-
-   - `sources` — the Glyphs source file to build from.
-   - `familyName` — the exact family name written into the compiled font's name table.
-   - `buildOTF: false` — Google Fonts only requires TTF, so OTF generation is skipped.
-
-4. **Verify the build** before committing or submitting, using Google Fonts' own QA tool:
-
-   ```bash
-   pip install "fontbakery[googlefonts]"
-   fontbakery check-googlefonts fonts/ttf/BeaconhouseNastaliq-Regular.ttf -l WARN
-   ```
 
 **Copyright (c) 2026 Beaconhouse Group.**
