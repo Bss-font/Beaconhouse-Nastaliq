@@ -42,7 +42,7 @@ This license is copied in [`OFL.txt`](OFL.txt), and is also available with a FAQ
 
 ## Repository Structure
 
-- `sources/` — Source files (UFO / Glyphs) for the font, including the joining-glyph components and GSUB/GPOS rule definitions.
+- `sources/` — `BeaconhouseNastaliq.glyphs` (editable font source) and `config.yaml` (build recipe), including the joining-glyph components and GSUB/GPOS rule definitions.
 - `fonts/` — Final binary font files (TTF/OTF).
 - `documentation/` — Images, samples, and promotional materials.
 
@@ -56,7 +56,7 @@ This license is copied in [`OFL.txt`](OFL.txt), and is also available with a FAQ
 
 ## Building from Source
 
-To build the font files from source, use the standard font engineering tools:
+Beaconhouse Nastaliq is built from a single [Glyphs](https://glyphsapp.com/) source file (`sources/BeaconhouseNastaliq.glyphs`) using the standard open-source Google Fonts toolchain (`fontmake` + `gftools`). This is a single-weight, static font — there are no variable axes or multiple masters.
 
 1. **Install dependencies:**
 
@@ -67,11 +67,29 @@ To build the font files from source, use the standard font engineering tools:
 2. **Build the font:**
 
    ```bash
-   gftools builder sources/upstream.yaml
+   gftools builder sources/config.yaml
    ```
 
+   This reads `sources/config.yaml`, compiles `sources/BeaconhouseNastaliq.glyphs` via `fontmake`, and outputs the final static TTF into `fonts/ttf/`.
 
+3. **`sources/config.yaml`:**
 
----
+   ```yaml
+   sources:
+     - BeaconhouseNastaliq.glyphs
+   familyName: "Beaconhouse Nastaliq"
+   buildOTF: false
+   ```
+
+   - `sources` — the Glyphs source file to build from.
+   - `familyName` — the exact family name written into the compiled font's name table.
+   - `buildOTF: false` — Google Fonts only requires TTF, so OTF generation is skipped.
+
+4. **Verify the build** before committing or submitting, using Google Fonts' own QA tool:
+
+   ```bash
+   pip install "fontbakery[googlefonts]"
+   fontbakery check-googlefonts fonts/ttf/BeaconhouseNastaliq-Regular.ttf -l WARN
+   ```
 
 **Copyright (c) 2026 Beaconhouse Group.**
