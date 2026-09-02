@@ -1,0 +1,6 @@
+name: "Beaconhouse Nastaliq"
+repository_url: "https://https://github.com/BSS-codeoutsourced/Beaconhouse-Nastaliq"
+branch: "main"
+files:
+  "fonts/BeaconhouseNastaliq-Regular.ttf": "fonts/BeaconhouseNastaliq-Regular.ttf"
+category: ["DISPLAY"]
