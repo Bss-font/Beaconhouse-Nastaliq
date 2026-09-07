@@ -1,16 +1,8 @@
-# CONTRIBUTORS
-# The following individuals contributed to the design and technical realization of BH Nastaliq.
+# This file contains the list of individuals who contributed to the
+# design and engineering of the Beaconhouse Nastaliq font.
+#
+# This does not imply any copyright or ownership claim over the font.
+# The Font Software is solely owned and copyrighted by Beaconhouse Group,
+# as listed in AUTHORS.txt.
 
-# Project Lead & Engineering
-Muhammad Zeeshan Nasar
-(Lead Font Developer, Mehr Type)
-https://mehrtype.com/
-
-# Calligraphy & Design
-[Nasrullah Mehr]
-(Calligraphy & Art Direction)
-
-# Project Supervision
-Beaconhouse Design Team
-(Commissioning & Review)
-https://www.beaconhouse.net/
+Muhammad Zeeshan Nasar - Designer & Engineer
